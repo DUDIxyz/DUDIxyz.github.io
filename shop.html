@@ -1,1 +1,209 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minimal Shop</title>
+
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card: #161616;
+      --text: #f5f5f5;
+      --muted: #9a9a9a;
+      --accent: #00ff9c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVBAR */
+    header {
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .hero button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* PRODUCTS */
+    .products {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      background: #222;
+    }
+
+    .card h3 {
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .card button {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.6rem;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>YOUR BRAND</h1>
+    <nav>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Minimal gear. Maximum intent.</h2>
+    <p>
+      Clean products for people who don’t want clutter.
+      No noise. No fluff. Just function.
+    </p>
+    <button>Explore Products</button>
+  </section>
+
+  <section class="products">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300" alt="Product 1">
+      <h3>Product One</h3>
+      <p>Simple, durable, designed to last.</p>
+      <div class="price">€29</div>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300" alt="Product 2">
+      <h3>Product Two</h3>
+      <p>Minimal design with maximum utility.</p>
+      <div class="price">€49</div>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300" alt="Product 3">
+      <h3>Product Three</h3>
+      <p>Built for movement and freedom.</p>
+      <div class="price">€79</div>
+      <button>Add to cart</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Your Brand — Frontend only
+  </footer>
+
+</body>
+</html>
+
